@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="create_base" xml:space="preserve">
+    <value>CREATE TABLE [dbo].[User] (
+    [id]       INT        IDENTITY (1, 1) NOT NULL,
+    [Nik_name] NCHAR (30) NULL,
+    [Login]    NCHAR (30) NULL,
+    [Password] NCHAR (30) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
+Create UNIQUE INDEX [log] on [User] (Login);
+Create UNIQUE INDEX [Pas] on [User] (Password);
+
+CREATE TABLE [dbo].[Дела] (
+    [Conf_ID] INT NOT NULL,
+    [Таблица] INT NOT NULL,
+    [User]    INT NOT NULL,
+    CONSTRAINT [PK_Дела] PRIMARY KEY CLUSTERED ([Conf_ID] ASC),
+    CONSTRAINT [FK_Дела_User] FOREIGN KEY ([User]) REFERENCES [dbo].[User] ([id]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE [dbo].[Общие_данные] (
+    [Conf_ID]                                           INT            NOT NULL,
+    [Таблица]                                           INT            NOT NULL,
+    [ФИО оператора внесшего последние изменения в дело] NVARCHAR (150) NULL,
+    [ФИО оператора создавшего дело]                     NVARCHAR (150) NULL,
+    [ФИО оператора зарегистрировавшего дело]            NVARCHAR (150) NULL,
+    [ФИО оператора выдавшего дело]                      NVARCHAR (150) NULL,
+    [Название МФЦ]                                      NVARCHAR (150) NULL,
+    [МФЦ, в котором зарегистрировано дело]              NVARCHAR (150) NULL,
+    [Комментарий к делу]                                NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_Общие_данные] PRIMARY KEY CLUSTERED ([Conf_ID] ASC),
+    CONSTRAINT [FK_Общие_данные_Дела] FOREIGN KEY ([Conf_ID]) REFERENCES [dbo].[Дела] ([Conf_ID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE [dbo].[Данные_услуги] (
+    [Conf_ID]                           INT            NOT NULL,
+    [Таблица]                           INT            NOT NULL,
+    [Код услуги]                        NVARCHAR (MAX) NULL,
+    [Наименование услуги]               NVARCHAR (MAX) NULL,
+    [РГУ код услуги]                    NVARCHAR (MAX) NULL,
+    [РГУ код цели услуги]               NVARCHAR (MAX) NULL,
+    [Код группирующей услуги]           NVARCHAR (MAX) NULL,
+    [Наименование группирующей услуги]  NVARCHAR (MAX) NULL,
+    [Код классификационной услуги]      NVARCHAR (MAX) NULL,
+    [Название классификационной услуги] NVARCHAR (MAX) NULL,
+    [Вариант услуги]                    NVARCHAR (MAX) NULL,
+    [Число услуг в деле]                INT            NULL,
+    CONSTRAINT [PK_Данные_услуги] PRIMARY KEY CLUSTERED ([Conf_ID] ASC),
+    CONSTRAINT [FK_Данные_услуги_Дела] FOREIGN KEY ([Conf_ID]) REFERENCES [dbo].[Дела] ([Conf_ID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE [dbo].[Данные ЮЛ] (
+    [Conf_ID]                INT         NOT NULL,
+    [Таблица]                INT         NOT NULL,
+    [Организация]            NCHAR (100) NULL,
+    [ИНН]                    NCHAR (100) NULL,
+    [ОГРН]                   NCHAR (100) NULL,
+    [Фамилия представителя]  NCHAR (100) NULL,
+    [Имя представителя]      NCHAR (100) NULL,
+    [Отчество представителя] NCHAR (100) NULL,
+    [ФИО]                    NCHAR (150) NULL,
+    [Адрес регистрации ЮЛ]   NCHAR (100) NULL,
+    CONSTRAINT [PK_Данные ЮЛ] PRIMARY KEY CLUSTERED ([Conf_ID] ASC),
+    CONSTRAINT [FK_Данные ЮЛ_Дела] FOREIGN KEY ([Conf_ID]) REFERENCES [dbo].[Дела] ([Conf_ID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE [dbo].[Данные ФЛ/ИП] (
+    [Conf_ID]                              INT            NOT NULL,
+    [Таблица]                              INT            NOT NULL,
+    [Фамилия]                              NVARCHAR (MAX) NULL,
+    [Имя]                                  NVARCHAR (MAX) NULL,
+    [Отчество]                             NVARCHAR (MAX) NULL,
+    [ФИО]                                  NVARCHAR (MAX) NULL,
+    [Дата рождения]                        NVARCHAR (MAX) NULL,
+    [Мобильный телефон]                    NVARCHAR (MAX) NULL,
+    [Стационарный телефон]                 NVARCHAR (MAX) NULL,
+    [Электронная почта]                    NVARCHAR (MAX) NULL,
+    [Наименование ДУЛ]                     NVARCHAR (MAX) NULL,
+    [Серия ДУЛ]                            NVARCHAR (MAX) NULL,
+    [Номер ДУЛ]                            NVARCHAR (MAX) NULL,
+    [Дата выдачи ДУЛ]                      NVARCHAR (MAX) NULL,
+    [Орган выдавший ДУЛ]                   NVARCHAR (MAX) NULL,
+    [ОГРН индивидуального предпринимателя] NVARCHAR (MAX) NULL,
+    [ИНН ФЛ/ИП]                            NVARCHAR (MAX) NULL,
+    [Адрес регистрации ФЛ/ИП]              NVARCHAR (MAX) NULL,
+    [Адрес фактического проживания ФЛ/ИП]  NVARCHAR (MAX) NULL,
+    [Адрес временной регистрации ФЛ/ИП]    NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_Данные ФЛ/ИП] PRIMARY KEY CLUSTERED ([Conf_ID] ASC),
+    CONSTRAINT [FK_Данные ФЛ/ИП_Дела] FOREIGN KEY ([Conf_ID]) REFERENCES [dbo].[Дела] ([Conf_ID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE [dbo].[Процесс окозания услуги] (
+    [Conf_ID]                               INT            NOT NULL,
+    [Таблица]                               INT            NOT NULL,
+    [Номер дела / Номер консультации]       INT            NULL,
+    [Короткий номер дела]                   NVARCHAR (MAX) NULL,
+    [Текущий статус услуги]                 NCHAR (100)    NULL,
+    [Наименование ОГВ, исполняющего услугу] NCHAR (300)    NULL,
+    [Код ОГВ, исполняющего услугу]          INT            NULL,
+    [Результат оказания услуги]             NCHAR (20)     NULL,
+    [Наименование платежа]                  NCHAR (100)    NULL,
+    [Сумма платежа]                         INT            NULL,
+    [PIN-дела]                              NCHAR (100)    NULL,
+    [Номер дела в ПК ПВД]                   NCHAR (200)    NULL,
+    [Согласен на опрос в ИАС МКГУ]          NCHAR (200)    NULL,
+    CONSTRAINT [PK_Процесс окозания услуг] PRIMARY KEY CLUSTERED ([Conf_ID] ASC),
+    CONSTRAINT [FK_Процесс окозания услуги_Дела] FOREIGN KEY ([Conf_ID]) REFERENCES [dbo].[Дела] ([Conf_ID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE [dbo].[Сведения по обьектам недвижимости] (
+    [Conf_ID]           INT         NOT NULL,
+    [Таблица]           INT         NOT NULL,
+    [Название объекта]  NCHAR (100) NULL,
+    [Тип объекта]       NCHAR (100) NULL,
+    [Кадастровый номер] NCHAR (100) NULL,
+    [Адрес объекта]     NCHAR (100) NULL,
+    CONSTRAINT [PK_Сведения по обьектам недвижимости] PRIMARY KEY CLUSTERED ([Conf_ID] ASC),
+    CONSTRAINT [FK_Сведения по обьектам недвижимости_Дела] FOREIGN KEY ([Conf_ID]) REFERENCES [dbo].[Дела] ([Conf_ID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE [dbo].[Сроки и даты] (
+    [Conf_ID]                  INT        NOT NULL,
+    [Таблица]                  INT        NOT NULL,
+    [Дата создания]            NCHAR (30) NULL,
+    [Дата регистрации]         NCHAR (30) NULL,
+    [Дата выдачи дела]         NCHAR (30) NULL,
+    [Плановая дата завершения] NCHAR (30) NULL,
+    [Дата завершения]          NCHAR (30) NULL,
+    [Дата консультации]        NCHAR (30) NULL,
+    CONSTRAINT [PK_Сроки и даты] PRIMARY KEY CLUSTERED ([Conf_ID] ASC),
+    CONSTRAINT [FK_Сроки и даты_Дела] FOREIGN KEY ([Conf_ID]) REFERENCES [dbo].[Дела] ([Conf_ID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+Insert into [User] ([Nik_name],[Login],[Password]) values (1,1,1);</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Leto_Text_Sans_Defect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Leto Text Sans Defect.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="фон" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\фон.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
